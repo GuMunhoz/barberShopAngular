@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "gmBarberShop"
+  "defaultProject": "gmBarberShop",
+  "cli": {
+    "analytics": "fae46b86-ee7e-4df7-be4f-489c85acd6cf"
+  }
 }
