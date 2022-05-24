@@ -1,0 +1,33 @@
+@import '../../../sass/helpers/variables';
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-around;
+// background-color: $color-white-lighter;
+background-color: $color-brown;
+  height: 100px;
+
+}
+
+// .logo{
+
+
+// }
+
+.logoMain {
+    width: 70px;
+    margin-top: 10px;
+
+}
+.header-button {
+  background-color: $color-brown;
+  color: $color-white;
+  min-width: 160px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid $color-black-second;
+}
+.header-button{
+  margin-top: 25px;
+}
+

@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap');
+
+@import './sass/layout/layout-shared.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; overflow: hidden;}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }

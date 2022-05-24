@@ -1,0 +1,18 @@
+@import '../../sass/helpers/variables';
+
+.container {
+  display: block;
+  width: 100vw;
+  height: 85vh;
+  padding: 0;
+  text-align: center;
+  color: $color-white;
+  background: url(../..//assets/img/background/backgroundtwo.png) no-repeat
+    bottom center scroll;
+  // background-position: 30% 50%;
+  background-color: $color-black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: 100vw 96vh;
+  -o-background-size: cover;
+}

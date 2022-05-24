@@ -1,0 +1,60 @@
+
+@import '../../../sass/helpers/variables';
+main{
+  width: 100%;
+  position: absolute;
+  // bottom: 0;
+  top: 93%;
+  min-height: 75px;
+  left: 0;
+  color: white;
+background-color: rgb(3, 3, 3);
+font-size: 12px;
+}
+
+.footer{
+display: flex;
+max-width: 832px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 2px;
+
+& .name{
+  display: block;
+  margin-top: 5px;
+  >h4{
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 13px;
+  }
+}
+
+& .location {
+margin-top: 8px;
+}
+
+& .email {
+  display: flex;
+  margin-top: 8px;
+}
+
+& .text-secundary{
+  color: $color-grey;
+  opacity: 0.4;
+}
+
+& .mat-icon{
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+& .social-medias{
+  margin-top: 10px;
+  cursor: pointer;
+}
+}
+
+.block-text {
+  display: block;
+  margin-left: 3px;
+}
