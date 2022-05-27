@@ -22,7 +22,7 @@
     //  height: 16rem;
     max-width: 60vw;
     //  margin-left: 3.5rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
 
   &.-line {
@@ -34,75 +34,37 @@
   }
 }
 
-@media screen and (min-width: 1550px) {
-  .label {
-    &.-container {
-      margin-top: 8rem;
-    }
-  }
+.schedule-time {
+  background-color: transparent;
+  border: none;
+  margin-right: 32rem;
+  margin-top: 1rem;
 }
 
-
-.button-effect {
-  padding: 30px 0px;
-
-
-  a {
-    margin-right: 17px;
-
-    &:nth-child(2) {
-      background-color: $button-bg-1;
-    }
-
-    &:nth-child(3) {
-      background-color: $button-bg-2;
-    }
-
-    &:nth-child(4) {
-      background-color: $button-bg-3;
-    }
-
-    &:nth-child(5) {
-      background-color: $button-bg-4;
-    }
-
-    &:nth-child(6) {
-      background-color: $button-bg-5;
-    }
-
-    &:last-child {
-      margin-right: 0px;
-    }
-  }
-}
-
-.effect {
+.button {
+  padding: 1em 2.8em;
+  box-shadow: 0 0 10px $color-grey;
+  border-radius: 90px;
+  cursor: pointer;
   text-align: center;
   display: inline-block;
   position: relative;
   text-decoration: none;
-  color: $link-text-color;
+  color: $color-white;
   text-transform: capitalize;
-  /* background-color: - add your own background-color */
-  font: {
-    family: 'Roboto', sans-serif; /* put your font-family */
-    size: 18px;
-  }
-  padding: 20px 0px;
-  width: 150px;
-  border-radius: $border-radius;
+  font-size: 21px;
+  font-family: $text_bold;
+  width: 170px;
   overflow: hidden;
+  background-color: $color-black;
 }
 
-
-
-.effect.effect-2 {
+.button.effect {
   transition: all 0.2s linear 0s;
-
   &:before {
     content: "\f0a4";
     font-family: FontAwesome;
-    font-size: 15px;
+    font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,8 +73,8 @@
     right: -30px;
     width: 30px;
     height: 100%;
-    background-color: rgba($overlay-color,0.3);
-    border-radius: 0px $border-radius $border-radius 0px;
+    background-color: rgba($color-white, 0.3);
+    border-radius: 0px 6px 0px;
     transition: all 0.2s linear 0s;
     text-align: center;
   }
@@ -127,5 +89,13 @@
   }
 }
 
-
-
+@media screen and (min-width: 1550px) {
+  .label {
+    &.-container {
+      margin-top: 8rem;
+    }
+  }
+  .schedule-time {
+    margin-right: 46rem;
+  }
+}
