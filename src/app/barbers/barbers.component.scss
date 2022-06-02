@@ -1,3 +1,5 @@
+@import "../../sass/helpers/variables";
+
 .barbers-container {
 display: inline-block;
 }
@@ -12,4 +14,57 @@ display: inline-block;
 }
 .container-profiles{
   background-color: aqua;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  // row-gap: 2.5rem;
+  column-gap: 2rem;
+  height: 75vh;
+  grid-template-rows: 4rem;
+  // margin-top: 2rem;
+
+  row-gap: 0.5rem;
+
+
+  >.label-header {
+    grid-column: 1/4;
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 55.68px;
+    >label {
+      margin-left: 8rem;
+    }
+  }
+  >.barber-one {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  >.barber-two {
+    grid-column: 2/4;
+    text-align: center;
+  }
+
+}
+
+.name-barber {
+  font-size: 18px;
+  font-weight: 700;
+  color: $color-black;
+  margin-bottom: 1rem;
+}
+.descrition-barber{
+  font-size: 13px;
+  text-align: center;
+  line-height: 15.08px;
+  font-weight: 700;
+}
+
+.label-header, .barber-one,.barber-two {
+background-color: #bdbdbd;
+border: 2px solid #333;
 }
