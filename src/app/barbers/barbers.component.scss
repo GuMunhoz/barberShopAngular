@@ -33,7 +33,7 @@
 }
 
 .name-barber {
-  font-size: 20px;
+  font-size:  calc(60% + 1.8vmin);
   font-weight: 700;
   color: $color-black;
   margin-top: 0.2rem;
@@ -41,18 +41,8 @@
 }
 
 .descrition-barber {
-  font-size: 13px;
   text-align: center;
   font-weight: 700;
   max-width: 55%;
-}
-
-@media screen and (min-width: 1550px) {
-  .name-barber {
-    font-size: 26px;
-  }
-
-  .descrition-barber {
-    font-size: 18px;
-  }
+  font-size:  calc(60% + 0.6vmin);
 }
