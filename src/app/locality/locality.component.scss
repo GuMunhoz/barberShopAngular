@@ -9,7 +9,12 @@ grid-template-rows: 50% 30% 20%;
 .contact {
 
   &.-label {
-    color: $color-white;
+    margin-left: 3rem;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 29px;
+    color: $color-black;
+
   }
 }
 > section {
@@ -18,3 +23,18 @@ grid-template-rows: 50% 30% 20%;
   grid-column: 1/4;
 }
 }
+.test{
+  padding-left: 3rem;
+  width: 25%;
+
+  >li {
+    line-height: 20px;
+    font-weight: 300;
+    margin-top: 0.5rem;
+    >mat-icon {
+      position: relative;
+      top: 0.3rem;
+      font-size: 22px !important;
+    }
+  }
+ }
