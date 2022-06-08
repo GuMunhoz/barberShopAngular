@@ -1,9 +1,9 @@
-@import '../helpers/variables';
+@import "../helpers/variables";
 
 .container {
   overflow: auto;
   height: 100%;
-  font-family: $text
+  font-family: $text;
 }
 
 .header {
@@ -15,4 +15,35 @@
 
 ul {
   list-style: none;
+}
+
+.l-button {
+  // background-color: $button_primary;
+  color: $color-white;
+  text-transform: uppercase;
+  font-family: $text;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 10px $color-grey;
+  border: none;
+  cursor: pointer;
+  border-radius: 90px;
+  transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  min-width: 250px;
+  padding: 0.5rem;
+  font-size: 14px;
+  border-radius: 3px;
+  display: flex;
+  border: thin solid $color-black;
+  align-items: center;
+
+  &:focus {
+    border: 1px solid $color-turquoise-light;
+  }
 }
