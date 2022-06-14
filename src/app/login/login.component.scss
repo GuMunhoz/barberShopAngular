@@ -1,0 +1,18 @@
+@import '../../sass/helpers/variables';
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr ;
+  height: 100%;
+
+}
+
+.login {
+  background-color: #bdbdbd;
+border: 2px solid #333;
+
+&.-background {
+  background-image: url(../../assets/img/background/login.jpg);
+  background-size: contain;
+}
+}
