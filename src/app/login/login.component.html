@@ -1,10 +1,16 @@
 <main class="container">
   <section class="content">
     <div class="login -background">
-
     </div>
     <aside class="login -side">
-      <h1>Inputs</h1>
+      <div class="header">
+        <button class="title" [ngClass]="true  ? '-active' :''">
+          <label>Login</label>
+        </button>
+        <button class="title" [ngClass]="true ? '-active' :''">
+          <label>Sign Up</label>
+        </button>
+      </div>
     </aside>
   </section>
 </main>

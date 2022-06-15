@@ -16,3 +16,41 @@ border: 2px solid #333;
   background-size: contain;
 }
 }
+
+.header {
+  // background-color: red;
+  padding: 2rem;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  >.title {
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    line-height: 37px;
+    font-family: $text;
+    font-weight: 600;
+    width: 25%;
+    color: $color-grey;
+    cursor: pointer;
+    >label {
+      cursor: pointer;
+    }
+    &.-active {
+      color: $color-black;
+
+      &:after {
+        content: '';
+        display: block;
+        height: 4px;
+        background-color: $color-brown-dark;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        }
+    }
+
+  }
+}
