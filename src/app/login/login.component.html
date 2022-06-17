@@ -11,6 +11,50 @@
           <label>Sign Up</label>
         </button>
       </div>
+      <section class="container-input login"   *ngIf="true else signUp">
+        <form class="input-form">
+          <mat-form-field class="input-full">
+            <mat-label>Email</mat-label>
+            <!-- <mat-icon class="material-symbols-outlined">mail</mat-icon> -->
+            <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                   placeholder="Ex. pat@example.com" maxlength="50">
+            <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error>
+
+          </mat-form-field>
+
+          <mat-form-field class="input-full password">
+            <mat-label>Password</mat-label>
+            <!-- <mat-icon class="material-symbols-outlined">mail</mat-icon> -->
+            <input type="password" matInput [type]="hide ? 'password' : 'text'" maxlength="50"
+                   placeholder="Digite sua senha">
+
+            <button
+            type="button"
+            class="button-password"
+            mat-icon-button (click)="hide = !hide"
+            >
+            <mat-icon>{{ hide ? "visibility" : "visibility_off" }}</mat-icon>
+          </button>
+          </mat-form-field>
+        </form>
+
+        <button class="l-button submit" type="submit">Login</button>
+        <label class="forget-pass"> Esqueceu sua senha ?</label>
+
+
+      </section>
+      <ng-template #signUp>
+        <section class="container-input signUp">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Nihil maxime eos nulla sequi nobis consectetur obcaecati, necessitatibus ab atque labore reprehenderit!
+        </section>
+      </ng-template>
     </aside>
   </section>
 </main>
