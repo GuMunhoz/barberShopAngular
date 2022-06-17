@@ -16,6 +16,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class LoginComponent implements OnInit {
   hide : boolean = true;
+  loginTemplate: boolean = true;
   emailFormControl = new FormControl('', [ Validators.required, Validators.email,]);
   matcher = new MyErrorStateMatcher();
   constructor() { }
@@ -23,4 +24,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  toggle() {
+    this.loginTemplate = !this.loginTemplate;
+  }
 }

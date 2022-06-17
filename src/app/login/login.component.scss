@@ -1,110 +1,124 @@
-@import '../../sass/helpers/variables';
+@import "../../sass/helpers/variables";
 
 .content {
   display: grid;
-  grid-template-columns: 2fr 1fr ;
+  grid-template-columns: 2fr 1fr;
   height: 100%;
-
 }
 
 .login {
-  background-color: #bdbdbd;
-border: 2px solid #333;
-
-&.-background {
-  background-image: url(../../assets/img/background/login.jpg);
-  background-size: contain;
-}
+  &.-background {
+    background-image: url(../../assets/img/background/login.jpg);
+    background-size: contain;
+  }
 }
 
 .header {
-  // background-color: red;
   padding: 2rem;
   margin: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  >.title {
+  > .title {
     border: none;
     background: transparent;
     font-size: 18px;
     line-height: 37px;
     font-family: $text;
     font-weight: 600;
-    width: 25%;
+    width: 35%;
     color: $color-grey;
     cursor: pointer;
-    >label {
+    > label {
       cursor: pointer;
+    }
+    &:hover {
+      color: $color-black;
     }
     &.-active {
       color: $color-black;
+      pointer-events: none;
+      cursor: default;
 
       &:after {
-        content: '';
+        content: "";
         display: block;
         height: 4px;
         background-color: $color-brown-dark;
         position: relative;
         bottom: 0;
         left: 0;
-        }
+      }
     }
-
   }
 }
 
-.container-input{
-  // height: 80%;
-
-  &.login {
-    background-color: aqua;
+.container-input {
+  &.child {
     padding: 2rem;
-  }
-  &.signUp {
-    background-color: rebeccapurple;
   }
 }
 
 .input-form {
-  // min-width: 150px;
-  // max-width: 500px;
   width: 100%;
   margin-top: 2rem;
 
-}
-
-.input-full {
-  width: 100%;
-  &.password {
-    margin-top: 1rem;
+  > .input-full {
+    width: 100%;
+    &.password {
+      margin-top: 1rem;
+    }
   }
 }
 
-
 .button-password {
-position: absolute;
-right: 1rem;
-bottom: 0.2rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 0.2rem;
 }
 
 .l-button {
   &.submit {
+    font-weight: 600;
     width: 18rem !important;
     margin: 1rem auto;
     color: $color-black;
     font-family: $text;
-    border: 1px solid $color-grey-dark;
+    border: 2px solid $color-black;
+  }
+
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
   }
 }
 
 .forget-pass {
   font-family: $text;
   cursor: pointer;
-  color: #0000EE;
+  color: $color-link;
   font-weight: 500;
   margin-left: 6rem;
   margin-top: 2rem;
   position: absolute;
+
+  &:hover {
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 1550px) {
+  .header {
+    padding: 3rem;
+  }
+
+  .container-input {
+    &.child {
+      margin-top: 1.5rem;
+    }
+  }
+  .forget-pass {
+    margin-left: 12.5rem;
+  }
 }
