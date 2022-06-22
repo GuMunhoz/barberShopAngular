@@ -8,6 +8,7 @@ import { LocalityComponent } from '../locality/locality.component';
 import { LoginComponent } from '../login/login.component';
 import { SacComponent } from '../sac/sac.component';
 import { SchedulesComponent } from '../schedules/schedules.component';
+import { ForgetPasswordComponent } from '../forget-password/forget-password.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,6 +18,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'sac', component: SacComponent },
   { path: 'schedules', component: SchedulesComponent },
+  { path: 'password', component: ForgetPasswordComponent },
+
 ];
 
 @NgModule({

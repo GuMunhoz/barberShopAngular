@@ -1,7 +1,7 @@
 <main class="container">
-  <section class="content">
-    <div class="login -background"></div>
-    <aside class="login -side">
+  <section class="content-background">
+    <div class="img-background"></div>
+    <aside>
       <div class="header">
         <button
           class="title"
@@ -65,7 +65,7 @@
         </form>
 
         <button class="l-button submit" type="submit">Entrar</button>
-        <label class="forget-pass"> Esqueceu sua senha ?</label>
+        <label [routerLink]="['/password']" class="forget-pass"> Esqueceu sua senha ?</label>
       </section>
       <ng-template #signUp>
         <section class="container-input child">
