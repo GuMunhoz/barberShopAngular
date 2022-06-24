@@ -36,10 +36,10 @@
                 !emailFormControl.hasError('required')
               "
             >
-              Please enter a valid email address
+              Por favor insira um endereço de e-mail válido
             </mat-error>
             <mat-error *ngIf="emailFormControl.hasError('required')">
-              Email is <strong>required</strong>
+              E-mail é <strong>obrigatório</strong>
             </mat-error>
           </mat-form-field>
 
@@ -51,6 +51,7 @@
               [type]="hide ? 'password' : 'text'"
               maxlength="50"
               placeholder="Digite sua senha"
+              [formControl]="passwordFormControl"
             />
 
             <button
@@ -64,8 +65,17 @@
           </mat-form-field>
         </form>
 
-        <button class="l-button submit" type="submit">Entrar</button>
-        <label [routerLink]="['/password']" class="forget-pass"> Esqueceu sua senha ?</label>
+        <button
+          class="l-button submit"
+          [ngClass]="fieldInvalidLogin ? 'l-button submit disabled' : ''"
+          [disabled]="fieldInvalidLogin"
+          type="submit"
+        >
+          Entrar
+        </button>
+        <label [routerLink]="['/password']" class="forget-pass">
+          Esqueceu sua senha ?</label
+        >
       </section>
       <ng-template #signUp>
         <section class="container-input child">
@@ -87,10 +97,10 @@
                   !emailFormControl.hasError('required')
                 "
               >
-                Please enter a valid email address
+                Por favor insira um endereço de e-mail válido
               </mat-error>
               <mat-error *ngIf="emailFormControl.hasError('required')">
-                Email is <strong>required</strong>
+                E-mail é <strong>obrigatório</strong>
               </mat-error>
             </mat-form-field>
 
@@ -101,6 +111,7 @@
                 matInput
                 placeholder="Digite seu nome"
                 maxlength="50"
+                [formControl]="userFormControl"
               />
             </mat-form-field>
 
@@ -112,6 +123,7 @@
                 [type]="hide ? 'password' : 'text'"
                 maxlength="50"
                 placeholder="Digite uma senha"
+                [formControl]="passwordFormControl"
               />
 
               <button
@@ -127,7 +139,14 @@
             </mat-form-field>
           </form>
 
-          <button class="l-button submit" type="submit">Registrar-se</button>
+          <button
+            class="l-button submit"
+            [disabled]="fieldInvalidSignUp"
+            [ngClass]="fieldInvalidSignUp ? 'l-button submit disabled' : ''"
+            type="submit"
+          >
+            Registrar-se
+          </button>
         </section>
       </ng-template>
     </aside>
