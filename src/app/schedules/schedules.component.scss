@@ -1,0 +1,35 @@
+@import '../../sass/helpers/variables';
+
+.header{
+  text-align: start;
+  padding: 2rem;
+  margin-left: 3rem;
+  >h1 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+
+.filters {
+  display: flex;
+  // justify-content: center;
+ &.-barbers {
+  margin-left: 35rem;
+  >.select-barber {
+    color: $color-black;
+    text-transform: uppercase;
+    font-weight: 100;
+    padding: 0.5rem 1rem;
+    border: solid 1px $color-grey;
+    font-family: $text;
+    cursor: pointer;
+    transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+  }
+ }
+
+}
+

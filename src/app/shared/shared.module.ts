@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatToolbarModule,} from '@angular/material/toolbar';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 import {MatIconModule} from '@angular/material/icon'
 import {MatButtonModule} from '@angular/material/button';
@@ -24,9 +25,10 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDatepickerModule
 
   ],
-  exports: [HeaderComponent,FooterComponent,MatIconModule, MatButtonModule,MatInputModule,FormsModule,ReactiveFormsModule]
+  exports: [HeaderComponent,FooterComponent,MatIconModule, MatButtonModule,MatInputModule,FormsModule,ReactiveFormsModule,MatDatepickerModule]
 })
 export class SharedModule { }
