@@ -67,17 +67,6 @@
   }
 }
 
-.l-button {
-  &.submit {
-    &.disabled {
-      opacity: 0.5;
-      color: $color-black;
-      pointer-events: none;
-      border: 2px solid #0000000a;
-    }
-  }
-}
-
 @media screen and (min-width: 1550px) {
   .header {
     padding: 3rem;

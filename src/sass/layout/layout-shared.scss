@@ -2,8 +2,8 @@
 
 .container {
   overflow: auto;
-  // height: 100%;
-  height: calc(100% - 170px);
+  height: 100%;
+  // height: calc(100% - 170px);
   font-family: $text;
 }
 
@@ -38,13 +38,16 @@ ul {
     font-weight: 600;
     width: 18rem !important;
     margin: 1rem auto;
-    color: $color-black;
+    color: $color-white;
     font-family: $text;
     border: 2px solid $color-black;
+    background-color: $color-brown-dark;
 
-    &:hover {
-      background-color: $color-black;
-      color: $color-white;
+    &.disabled{
+      opacity: 0.5;
+      color: $color-black;
+      pointer-events: none;
+      background-color: $color-grey;
     }
   }
   &.schedule{
