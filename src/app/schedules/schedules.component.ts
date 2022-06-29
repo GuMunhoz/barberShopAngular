@@ -3,23 +3,24 @@ import { DateAdapter } from '@angular/material/core';
 
 
 export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  hour: string;
+  // logo: any;
+  nameBarber: string;
+  // scheduleButton: any;
 }
-
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {hour: '05/07/2022 09:00',  nameBarber: 'Bruno'},
+  {hour: '05/07/2022 10:00',  nameBarber: 'Felipe'},
+  {hour: '05/07/2022 11:00',  nameBarber: 'Bruno'},
+  {hour: '05/07/2022 11:00',  nameBarber: 'Felie'},
+  {hour: '05/07/2022 13:00',  nameBarber: 'Bruno'},
+  {hour: '05/07/2022 14:00',  nameBarber: 'Felipe'},
+  {hour: '05/07/2022 15:00',  nameBarber: 'Felipe'},
+  {hour: '05/07/2022 16:00',  nameBarber: 'Bruno'},
+  {hour: '05/07/2022 17:00',  nameBarber: 'Bruno'},
+  {hour: '05/07/2022 18:00',  nameBarber: 'Felipe'},
+  {hour: '05/07/2022 19:00',  nameBarber: 'Bruno'},
+
 ];
 @Component({
   selector: 'app-schedules',
@@ -30,7 +31,7 @@ export class SchedulesComponent implements OnInit {
   todayDate:Date = new Date();
   name: string;
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['hour', 'logo', 'nameBarber', 'scheduleButton'];
   dataSource = ELEMENT_DATA;
 
   myFilter = (d: Date | null): boolean => {

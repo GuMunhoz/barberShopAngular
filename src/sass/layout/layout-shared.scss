@@ -47,6 +47,17 @@ ul {
       color: $color-white;
     }
   }
+  &.schedule{
+    background-color: $color-brown;
+    box-shadow: none;
+    padding: 0.5rem 2rem;
+    border-radius: 7px;
+
+    &:hover {
+      background-color: $color-black;
+    }
+
+  }
 }
 
 .input {

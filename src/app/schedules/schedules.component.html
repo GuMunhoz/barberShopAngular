@@ -21,27 +21,31 @@
   <section class="table-hours">
     <mat-table [dataSource]="dataSource" class="table-container">
       <!-- Position Column -->
-      <ng-container matColumnDef="position">
-        <mat-header-cell *matHeaderCellDef> Horario </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+      <ng-container matColumnDef="hour">
+        <mat-header-cell class="list-header hours" *matHeaderCellDef> Horarios disponíveis </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.hour}} </mat-cell>
       </ng-container>
 
       <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <mat-header-cell *matHeaderCellDef> Logo </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+      <ng-container matColumnDef="logo">
+        <mat-header-cell class="list-header" *matHeaderCellDef>  </mat-header-cell>
+        <mat-cell *matCellDef="let element"> <img src="../../assets/img/barbers/barberOne.svg" width="50" alt=""> </mat-cell>
       </ng-container>
 
       <!-- Weight Column -->
-      <ng-container matColumnDef="weight">
-        <mat-header-cell *matHeaderCellDef> Barbeiro </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+      <ng-container matColumnDef="nameBarber">
+        <mat-header-cell class="list-header right" *matHeaderCellDef> Barbeiro </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.nameBarber}} </mat-cell>
       </ng-container>
 
       <!-- Symbol Column -->
-      <ng-container matColumnDef="symbol">
-        <mat-header-cell *matHeaderCellDef> Reservar </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+      <ng-container matColumnDef="scheduleButton">
+        <mat-header-cell class="list-header right" *matHeaderCellDef> Reservar </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <button class="l-button schedule">
+            Reservar Horário
+          </button>
+        </mat-cell>
       </ng-container>
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
