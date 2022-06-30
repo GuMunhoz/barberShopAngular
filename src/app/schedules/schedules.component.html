@@ -3,9 +3,14 @@
 
   <section class="filters">
     <div class="filters -date">
-      <mat-form-field class="example-full-width" appearance="fill">
+      <mat-form-field class="field-datepicker" appearance="fill">
         <mat-label>Escolha a data </mat-label>
-        <input matInput [matDatepickerFilter]="myFilter" [min]="todayDate" [matDatepicker]="picker">
+        <input
+          matInput
+          [matDatepickerFilter]="myFilter"
+          [min]="todayDate"
+          [matDatepicker]="picker"
+        />
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
@@ -13,45 +18,47 @@
 
     <div class="filters -barbers">
       <button class="select-barber">todos</button>
-      <button class="select-barber">Bruno</button>
-      <button class="select-barber">Felipe</button>
+      <button class="select-barber disabled">Bruno</button>
+      <button class="select-barber disabled">Felipe</button>
     </div>
-
   </section>
   <section class="table-hours">
-    <mat-table [dataSource]="dataSource" class="table-container">
-      <!-- Position Column -->
+    <mat-table [dataSource]="dataSource" class="mat-table">
       <ng-container matColumnDef="hour">
-        <mat-header-cell class="list-header hours" *matHeaderCellDef> Horarios disponíveis </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.hour}} </mat-cell>
+        <mat-header-cell class="list-header hours" *matHeaderCellDef>
+          Horarios disponíveis
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.hour }} </mat-cell>
       </ng-container>
 
-      <!-- Name Column -->
       <ng-container matColumnDef="logo">
-        <mat-header-cell class="list-header" *matHeaderCellDef>  </mat-header-cell>
-        <mat-cell *matCellDef="let element"> <img src="../../assets/img/barbers/barberOne.svg" width="50" alt=""> </mat-cell>
-      </ng-container>
-
-      <!-- Weight Column -->
-      <ng-container matColumnDef="nameBarber">
-        <mat-header-cell class="list-header right" *matHeaderCellDef> Barbeiro </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.nameBarber}} </mat-cell>
-      </ng-container>
-
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="scheduleButton">
-        <mat-header-cell class="list-header right" *matHeaderCellDef> Reservar </mat-header-cell>
+        <mat-header-cell class="list-header" *matHeaderCellDef>
+        </mat-header-cell>
         <mat-cell *matCellDef="let element">
-          <button class="l-button schedule">
-            Reservar Horário
-          </button>
+          <img src="../../assets/img/barbers/barberOne.svg" width="50" alt="" />
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="nameBarber">
+        <mat-header-cell class="list-header right" *matHeaderCellDef>
+          Barbeiro
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{ element.nameBarber }}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="scheduleButton">
+        <mat-header-cell class="list-header right" *matHeaderCellDef>
+          Reservar
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <button class="l-button schedule">Reservar Horário</button>
         </mat-cell>
       </ng-container>
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
     </mat-table>
   </section>
-
-
 </div>
