@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { DateAdapter } from '@angular/material/core';
+import { GenericModalModel } from '../shared/model/generic-modal.model';
+import { MatDialog } from '@angular/material/dialog';
+
+import { GenericModalComponent } from '../shared/generic-modal/generic-modal.component';
+import { ConfirmationModalComponent } from './../shared/modals/schedules/confirmation-modal/confirmation-modal.component';
 
 export interface PeriodicElement {
   hour: string;
@@ -36,9 +41,63 @@ export class SchedulesComponent implements OnInit {
     const day = (d || new Date()).getDay();
     return day !== 0;
   };
-  constructor(private dateAdapter: DateAdapter<Date>) {
+  constructor(
+    private dateAdapter: DateAdapter<Date>,
+    public confirmationDialog: MatDialog,
+    ) {
     this.dateAdapter.setLocale('pt-BR');
   }
 
   ngOnInit(): void {}
+
+  openModal(): void {
+    const dataDialog: GenericModalModel = {
+      error: false,
+      title: "Confirmar agendamento",
+      content: {
+        text: "",
+        simple: "",
+        complex: {
+          component: ConfirmationModalComponent,
+          params: null,
+        },
+      },
+      buttons: {
+        confirm: {
+          visible: true,
+          caption: "Confirmar",
+          action: { confirm: true },
+        },
+        cancel: {
+          visible: true,
+          caption: "Cancelar",
+          action: null,
+        },
+        delete: {
+          visible: false,
+          caption: "",
+          action: {},
+        },
+        save: {
+          visible: false,
+          caption: "Confirmar",
+          action: {},
+        },
+      },
+      async: {
+        action: null,
+      },
+    };
+    const dialogRef = this.confirmationDialog.open(GenericModalComponent, {
+      width: "450px",
+      data: dataDialog,
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result && result.confirm) {
+
+      }
+    });
+  }
+
 }

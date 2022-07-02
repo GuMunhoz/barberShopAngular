@@ -1,0 +1,13 @@
+<main>
+  <label id="example-radio-group-label">Informe o que será agendado *</label>
+  <mat-radio-group
+    aria-labelledby="label-radio-button"
+    class="radio-container"
+    [(ngModel)]="chosenOption">
+    <mat-radio-button class="radio-button" *ngFor="let option of options" [value]="option">
+      {{option}}
+    </mat-radio-button>
+  </mat-radio-group>
+  <div>Seu agendamento será de: <strong>{{chosenOption}}. </strong></div>
+
+</main>

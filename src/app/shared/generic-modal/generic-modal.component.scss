@@ -1,0 +1,59 @@
+@import '../../../sass/helpers/variables';
+
+
+.generic-modal {
+  color: $color-black;
+  font-size: 24px !important;
+  font-weight: 400 !important;
+  font-family: $text;
+  margin-top: -30px;
+  &__error {
+    color: red !important;
+    &::after {
+      content: "";
+      display: block;
+      width: 54px;
+      height: 4px;
+      background-color: red;
+      position: relative;
+      bottom: 5px;
+      margin-top: 10px;
+    }
+  }
+
+
+    &::after {
+      content: "";
+      display: block;
+      width: 54px;
+      height: 4px;
+      background-color: $color-brown;
+      position: relative;
+      bottom: 5px;
+      margin-top: 10px;
+    }
+
+}
+
+.generic-modal__header {
+  margin-top: -10px;
+  > .mat-dialog-title {
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 2rem;
+  }
+}
+.modal-footer {
+  display: flex;
+  padding-top: 3rem;
+  > .-cancel {
+    margin-right: 12px;
+  }
+}
+
+.modal-content {
+  max-height: 455px;
+  overflow-y: auto;
+}

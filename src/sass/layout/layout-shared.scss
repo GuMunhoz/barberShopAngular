@@ -61,6 +61,50 @@ ul {
     }
 
   }
+
+  &.close-modal {
+    // position: absolute;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    // left: 32rem;
+    background: transparent;
+    color: $color-black;
+    box-shadow: none;
+    margin-left: 90%;
+    > mat-icon {
+      font-size: 30px;
+    }
+    &:hover {
+      color: red;
+    }
+  }
+
+  &.cancel {
+    background-color: transparent;
+    box-shadow: none;
+    color: $color-grey-dark;
+    font-weight: 500;
+    border: 2px solid $color-red-lighter;
+
+    &:hover {
+      background-color: red;
+      font-weight: bold;
+      color: $color-black;
+    }
+  }
+
+  &.save{
+    color: $color-white;
+    font-family: $text;
+    border: 2px solid $color-black;
+    background-color: $color-brown-dark;
+    margin-left: auto;
+    &:hover{
+      background-color: $color-black;
+    }
+  }
 }
 
 .input {
@@ -98,4 +142,8 @@ ul {
       margin-top: 1rem;
     }
   }
+}
+.l-modal{
+  min-height: 220px;
+
 }

@@ -53,7 +53,7 @@
           Reservar
         </mat-header-cell>
         <mat-cell *matCellDef="let element">
-          <button class="l-button schedule">Reservar Horário</button>
+          <button  (click)="openModal()" class="l-button schedule">Reservar Horário</button>
         </mat-cell>
       </ng-container>
 

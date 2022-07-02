@@ -9,13 +9,21 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatRadioModule} from '@angular/material/radio';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { GenericModalComponent } from './generic-modal/generic-modal.component';
+import { ConfirmationModalComponent } from './modals/schedules/confirmation-modal/confirmation-modal.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent],
+  declarations: [
+    HeaderComponent,
+    FooterComponent,
+    GenericModalComponent,
+    ConfirmationModalComponent,
+  ],
   imports: [
     CommonModule,
     AppRoutingModule,
@@ -28,6 +36,8 @@ import { FooterComponent } from './footer/footer.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatTableModule,
+    MatFormFieldModule,
+    MatRadioModule
   ],
   exports: [
     HeaderComponent,
@@ -40,6 +50,8 @@ import { FooterComponent } from './footer/footer.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatTableModule,
+    MatFormFieldModule,
+    MatRadioModule
   ],
 })
 export class SharedModule {}

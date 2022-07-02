@@ -1,0 +1,88 @@
+<div class="l-modal">
+  <div class="generic-modal__header">
+    <button class="l-button close-modal" (click)="closeModal()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <h1
+      [ngClass]="{
+        'generic-modal': !data.error,
+        'generic-modal__error': data.error
+      }"
+      id="id-generic-modal-title"
+      mat-dialog-title
+    >
+      {{ data.title}}
+    </h1>
+  </div>
+
+  <div class="modal-content" mat-dialog-content>
+    <ng-container>
+      <span *ngIf="data.content.text">{{ data.content.text}}</span>
+      <br />
+      <span *ngIf="data.content.simple">{{
+        data.content.simple | translate
+      }}</span>
+      <br />
+      <ng-template #modalContainerComplex></ng-template>
+      <br />
+    </ng-container>
+    <!-- Msg de erro geral -->
+    <!-- <p
+      *ngFor="let error of _globals.errorMsgGlobal"
+      class="error-msg"
+      [translate]="'BACKEND.' + error"
+    ></p> -->
+  </div>
+
+  <div
+    class="modal-footer"
+    mat-dialog-actions
+  >
+    <button #btnDelete
+      *ngIf="data.buttons.delete.visible"
+      id="id-generic-modal-delete"
+      (click)="closeModal(data.buttons.delete.action || { delete: true })"
+      class="l-button cancel"
+      [class.-disabled]="data.buttons.delete.disabled"
+    >
+      {{ data.buttons.delete.caption}}</button
+    ><!--'FRONTEND.GLOBAL.DELETE'-->
+    <button #btnCancel
+      *ngIf="data.buttons.cancel.visible"
+      id="id-generic-modal-cancel"
+      (click)="closeModal(data.buttons.cancel.action || null)"
+      class="l-button cancel"
+      [class.-disabled]="data.buttons.cancel.disabled"
+    >
+      {{ data.buttons.cancel.caption}}
+    </button>
+    <!--'FRONTEND.GLOBAL.CANCEL'-->
+    <button #btnSave
+      *ngIf="data.buttons.save.visible"
+      id="id-generic-modal-save"
+      (click)="closeModal(data.buttons.save.action || { save: true })"
+      class="l-button save"
+     [class.-disabled]="data.buttons.save.disabled"
+    >
+      <span>{{data.buttons.save.caption }}</span>
+
+      <!--'FRONTEND.SAVE-->
+    </button>
+    <button #btnConfirm
+      *ngIf="data.buttons.confirm.visible"
+      [disabled]="isLoading"
+      [class.-disabled]="isLoading || data.buttons.confirm.disabled"
+      id="id-generic-modal-confirm"
+      (click)="closeModal(data.buttons.confirm.action || { confirm: true })"
+      class="l-button save"
+    >
+      <span>{{data.buttons.confirm.caption}}</span>
+
+      <!--'FRONTEND.GLOBAL.CONFIRM'-->
+      <app-loading
+        *ngIf="isLoading"
+        class="-white -small loading"
+      ></app-loading>
+    </button>
+  </div>
+</div>
