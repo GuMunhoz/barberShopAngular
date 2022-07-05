@@ -43,7 +43,7 @@
       id="id-generic-modal-delete"
       (click)="closeModal(data.buttons.delete.action || { delete: true })"
       class="l-button cancel"
-      [class.-disabled]="data.buttons.delete.disabled"
+      [class.disabled]="data.buttons.delete.disabled"
     >
       {{ data.buttons.delete.caption}}</button
     ><!--'FRONTEND.GLOBAL.DELETE'-->
@@ -52,7 +52,7 @@
       id="id-generic-modal-cancel"
       (click)="closeModal(data.buttons.cancel.action || null)"
       class="l-button cancel"
-      [class.-disabled]="data.buttons.cancel.disabled"
+      [class.disabled]="data.buttons.cancel.disabled"
     >
       {{ data.buttons.cancel.caption}}
     </button>
@@ -62,7 +62,8 @@
       id="id-generic-modal-save"
       (click)="closeModal(data.buttons.save.action || { save: true })"
       class="l-button save"
-     [class.-disabled]="data.buttons.save.disabled"
+     [class.disabled]="data.buttons.save.disabled"
+
     >
       <span>{{data.buttons.save.caption }}</span>
 
@@ -71,7 +72,7 @@
     <button #btnConfirm
       *ngIf="data.buttons.confirm.visible"
       [disabled]="isLoading"
-      [class.-disabled]="isLoading || data.buttons.confirm.disabled"
+      [class.disabled]="isLoading || data.buttons.confirm.disabled"
       id="id-generic-modal-confirm"
       (click)="closeModal(data.buttons.confirm.action || { confirm: true })"
       class="l-button save"

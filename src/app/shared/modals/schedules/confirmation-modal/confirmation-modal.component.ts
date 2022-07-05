@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { GenericModalComponent } from './../../../generic-modal/generic-modal.component';
 
 @Component({
   selector: 'app-confirmation-modal',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./confirmation-modal.component.scss']
 })
 export class ConfirmationModalComponent implements OnInit {
+  dataModal : GenericModalComponent = null;
   chosenOption: string;
   options: string[] = ['Corte cabelo', 'Barba', 'Cabelo + Barba', 'Pezinho'];
 
@@ -13,5 +15,17 @@ export class ConfirmationModalComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
+  // checked() {
+  //   let btnSave: HTMLElement = this.dataModal.saveButton.nativeElement;
+  //   if (btnSave) {
+  //     if (10 <5 ) {
+  //       btnSave.classList.add("disabled");
+  //     } else {
+  //       btnSave.classList.remove("disabled");
+  //     }
+  //   }
+  // }
 
 }

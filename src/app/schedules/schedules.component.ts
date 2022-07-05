@@ -67,6 +67,7 @@ export class SchedulesComponent implements OnInit {
           visible: true,
           caption: "Confirmar",
           action: { confirm: true },
+          disabled: false,
         },
         cancel: {
           visible: true,
@@ -80,7 +81,7 @@ export class SchedulesComponent implements OnInit {
         },
         save: {
           visible: false,
-          caption: "Confirmar",
+          caption: "",
           action: {},
         },
       },

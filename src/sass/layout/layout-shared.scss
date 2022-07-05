@@ -43,6 +43,10 @@ ul {
     border: 2px solid $color-black;
     background-color: $color-brown-dark;
 
+    &:hover {
+      background-color: $color-black;
+    }
+
     &.disabled{
       opacity: 0.5;
       color: $color-black;
@@ -104,6 +108,14 @@ ul {
     &:hover{
       background-color: $color-black;
     }
+  }
+
+
+  &.disabled{
+    opacity: 0.5;
+    color: $color-black;
+    pointer-events: none;
+    background-color: $color-grey;
   }
 }
 
