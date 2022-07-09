@@ -159,3 +159,17 @@ ul {
   min-height: 220px;
 
 }
+
+mat-row {
+  margin: 1rem;
+}
+mat-cell {
+  justify-content: center;
+}
+
+.mat-table {
+  background-color: $color-white-second;
+  width: 80%;
+  border: 2px solid $color-brown-dark;
+  font-family: $text;
+}

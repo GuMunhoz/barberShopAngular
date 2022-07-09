@@ -48,12 +48,7 @@
   }
 }
 
-mat-row {
-  margin: 1rem;
-}
-
 mat-cell {
-  justify-content: center;
   margin-bottom: 0.8rem;
 }
 .list-header {
@@ -73,15 +68,8 @@ mat-cell {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-
 }
-.mat-table {
-  background-color: $color-white-second;
-  width: 80%;
-  border: 2px solid $color-brown-dark;
-  font-family: $text;
-}
+
 ::ng-deep .mat-focused .mat-form-field-label {
   /*change color of label*/
   color: $color-grey !important;

@@ -1,0 +1,40 @@
+@import "../../../sass/helpers/variables";
+
+.my-schedules {
+  &.subtitle {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    > .icon {
+      color: $color-grey-dark;
+    }
+    > .label {
+      font-size: 18px;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+mat-header-cell {
+  font-size: 16px;
+  justify-content: center;
+}
+
+.mat-table {
+  margin: auto;
+  height: calc(80% - 180px);
+  overflow: auto;
+}
+
+.icon-status {
+  color: $color-grey-dark;
+  padding-left: 1rem;
+
+  &.done {
+    color: green;
+  }
+  &.pending {
+    color: orange;
+  }
+}
