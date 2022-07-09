@@ -1,1 +1,13 @@
-<p>my-schedules works!</p>
+<main class="container">
+  <ng-container *ngTemplateOutlet="10>5 ? clientTemplate : adminTemplate"></ng-container>
+
+  <ng-template #clientTemplate>
+    <header class="header">
+      <h2> Olá Gustavo</h2>
+    </header>
+    <label> Meus agendamentos</label>
+  </ng-template>
+  <ng-template #adminTemplate>
+    admin
+  </ng-template>
+</main>
