@@ -2,19 +2,23 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { GenericModalModel } from 'src/app/shared/model/generic-modal.model';
 import { GenericModalComponent } from './../../shared/generic-modal/generic-modal.component';
+import { ListAdmin } from './list-admin';
+import { ListClient } from './list-client';
 
-export interface PeriodicElement {
-  hour: string;
-  nameBarber: string;
-  service: string;
-  status: string;
-}
-const ELEMENT_DATA: PeriodicElement[] = [
+const ELEMENT_DATA_CLIENT: ListClient[] = [
   { hour: '05/07/2022 09:00', nameBarber: 'Bruno' ,service: 'Corte + barba',status:'pending'},
   { hour: '15/06/2022 16:00', nameBarber: 'Bruno', service: 'Corte + barba' , status:'done'},
   { hour: '02/06/2022 11:00', nameBarber: 'Felipe',service:'Barba' , status: 'done'},
 ];
 
+
+const ELEMENT_DATA_ADMIN: ListAdmin[] = [
+  { hour: '05/07/2022 09:00', nameClient: 'Osmar Oliveira', emailClient:'osmar@email.com', service:'Cabelo + Barba'},
+  { hour: '05/07/2022 10:00', nameClient: 'João Paulo',emailClient:'jp@email.com',service:'Cabelo + Barba' },
+  { hour: '05/07/2022 11:00', nameClient: 'Bruno Pacheco',emailClient:'pacheco@email.com' , service : 'Barba'},
+  { hour: '05/07/2022 11:00', nameClient: 'Johnatan Silva',emailClient:'john@email.com', service: 'Cabelo + Barba' },
+  { hour: '05/07/2022 13:00', nameClient: 'Gustavo Alves',emailClient:'galves@email.com', service: 'Cabelo' },
+];
 @Component({
   selector: 'app-my-schedules',
   templateUrl: './my-schedules.component.html',
@@ -22,8 +26,11 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class MySchedulesComponent implements OnInit {
   clientScreen: boolean = true;
-  displayedColumns: string[] = ['hour', 'nameBarber','service','status'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['hour', 'nameBarber','service','status',];
+  displayedColumns2: string [] = ['hour','nameClient','emailClient','service',];
+  dataSourceClient = ELEMENT_DATA_CLIENT;
+  dataSourceAdmin = ELEMENT_DATA_ADMIN;
+
   constructor(
     public confirmationDialog: MatDialog,
   ) { }

@@ -8,13 +8,14 @@
     <mat-icon class="subtitle icon">calendar_month</mat-icon>
     <label class="subtitle label"> Meus agendamentos</label>
   </div>
-  <ng-container *ngTemplateOutlet=" clientScreen ? clientTemplate : adminTemplate"></ng-container>
+  <ng-container *ngTemplateOutlet="clientScreen ? clientTemplate : adminTemplate"></ng-container>
 
   <ng-template #clientTemplate>
+
     <button class="l-button disabled clean-list"> Limpar minha lista</button>
 
 
-      <mat-table class="mat-table" [dataSource]="dataSource" class="mat-elevation-z8">
+      <mat-table class="mat-table" [dataSource]="dataSourceClient" class="mat-elevation-z8">
         <!-- Position Column -->
         <ng-container matColumnDef="hour">
           <mat-header-cell *matHeaderCellDef> Horário </mat-header-cell>
@@ -49,6 +50,41 @@
       </mat-table>
   </ng-template>
   <ng-template #adminTemplate>
-    admin
+    <div class="filters">
+      <button class="button-filter">Diária</button>
+      <button class="button-filter disabled">Semanal</button>
+      <button class="button-filter disabled">Mensal</button>
+    </div>
+    <button class="l-button upload-csv"> Exportar CSV.</button>
+
+    <mat-table class="mat-table admin" [dataSource]="dataSourceAdmin">
+      <!-- Position Column -->
+      <ng-container matColumnDef="hour">
+        <mat-header-cell *matHeaderCellDef> Horário </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.hour}} </mat-cell>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="nameClient">
+        <mat-header-cell *matHeaderCellDef> Cliente </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.nameClient}} </mat-cell>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="emailClient">
+        <mat-header-cell *matHeaderCellDef> E-mail do cliente </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.emailClient}} </mat-cell>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="service">
+        <mat-header-cell *matHeaderCellDef> Serviço </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.service}}</mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns2"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns2;"></mat-row>
+    </mat-table>
+
   </ng-template>
 </main>

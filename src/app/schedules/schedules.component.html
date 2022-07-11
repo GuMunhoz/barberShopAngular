@@ -16,10 +16,10 @@
       </mat-form-field>
     </div>
 
-    <div class="filters -barbers">
-      <button class="select-barber">todos</button>
-      <button class="select-barber disabled">Bruno</button>
-      <button class="select-barber disabled">Felipe</button>
+    <div class="filters">
+      <button class="button-filter">todos</button>
+      <button class="button-filter disabled">Bruno</button>
+      <button class="button-filter disabled">Felipe</button>
     </div>
   </section>
   <section class="table-hours">
@@ -35,7 +35,7 @@
         <mat-header-cell class="list-header" *matHeaderCellDef>
         </mat-header-cell>
         <mat-cell *matCellDef="let element">
-          <img src="../../assets/img/barbers/barberOne.svg" width="50" alt="" />
+          <img [src]=" element.nameBarber === 'Bruno' ?'../../assets/img/barbers/barberOne.svg' : '../../assets/img/barbers/barberTwo.svg'" width="50" alt="" />
         </mat-cell>
       </ng-container>
 

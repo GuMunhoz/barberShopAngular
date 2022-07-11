@@ -30,6 +30,9 @@ mat-header-cell {
   margin: auto;
   max-height: calc(80% - 216px);
   overflow: auto;
+  &.admin {
+    max-height: calc(80% - 250px) !important;
+  }
 }
 
 .icon-status {
@@ -60,4 +63,20 @@ mat-header-cell {
     bottom: 1rem;
   }
  }
+ &.upload-csv {
+  margin-left: 75%;
+  position: relative;
+  bottom: 2.5em;
+  background-color: $color-brown;
+  color: $color-white;
+  &:hover{
+    background-color: $color-black;
+  }
+ }
+}
+
+.filters {
+  display: flex;
+  margin-left: 10%;
+  align-items: center;
 }
