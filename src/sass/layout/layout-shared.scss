@@ -81,7 +81,7 @@ ul {
       font-size: 30px;
     }
     &:hover {
-      color: red;
+      color: $color-red;
     }
   }
 
@@ -93,7 +93,7 @@ ul {
     border: 2px solid $color-red-lighter;
 
     &:hover {
-      background-color: red;
+      background-color: $color-red;
       font-weight: bold;
       color: $color-black;
     }

@@ -4,6 +4,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatTableModule } from '@angular/material/table';
+import{MatTooltipModule} from '@angular/material/tooltip';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -37,7 +39,10 @@ import { ConfirmationModalComponent } from './modals/schedules/confirmation-moda
     MatNativeDateModule,
     MatTableModule,
     MatFormFieldModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTooltipModule,
+    MatSlideToggleModule,
+
   ],
   exports: [
     HeaderComponent,
@@ -51,7 +56,9 @@ import { ConfirmationModalComponent } from './modals/schedules/confirmation-moda
     MatNativeDateModule,
     MatTableModule,
     MatFormFieldModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTooltipModule,
+    MatSlideToggleModule,
   ],
 })
 export class SharedModule {}

@@ -1,4 +1,6 @@
 <main class="container">
+  <mat-slide-toggle (click)="toogleTemplate()"></mat-slide-toggle>
+
   <header class="header">
     <h2> Olá Gustavo</h2>
   </header>
@@ -6,9 +8,10 @@
     <mat-icon class="subtitle icon">calendar_month</mat-icon>
     <label class="subtitle label"> Meus agendamentos</label>
   </div>
-  <ng-container *ngTemplateOutlet="10>5 ? clientTemplate : adminTemplate"></ng-container>
+  <ng-container *ngTemplateOutlet=" clientScreen ? clientTemplate : adminTemplate"></ng-container>
 
   <ng-template #clientTemplate>
+    <button class="l-button disabled clean-list"> Limpar minha lista</button>
 
 
       <mat-table class="mat-table" [dataSource]="dataSource" class="mat-elevation-z8">
@@ -35,9 +38,9 @@
           <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
           <mat-cell *matCellDef="let element">
 
-            <mat-icon class="icon-status pending" *ngIf="element.status !=='done'">pending</mat-icon>
-            <mat-icon class="icon-status done" *ngIf="element.status =='done'">done</mat-icon>
-            <mat-icon class="icon-status delete" *ngIf="element.status !=='done'" >delete</mat-icon>
+            <mat-icon matTooltip="Pendente" class="icon-status pending" *ngIf="element.status !=='done'">pending</mat-icon>
+            <mat-icon matTooltip="Finalizado" class="icon-status done" *ngIf="element.status =='done'">done</mat-icon>
+            <mat-icon  matTooltip="Excluir" (click)="deleteSchedule()" class="icon-status delete" *ngIf="element.status !=='done'" >delete</mat-icon>
           </mat-cell>
         </ng-container>
 

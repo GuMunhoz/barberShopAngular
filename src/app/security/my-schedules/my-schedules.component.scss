@@ -1,5 +1,10 @@
 @import "../../../sass/helpers/variables";
 
+mat-slide-toggle{
+  position: absolute;
+  left: 1rem;
+}
+
 .my-schedules {
   &.subtitle {
     display: flex;
@@ -23,7 +28,7 @@ mat-header-cell {
 
 .mat-table {
   margin: auto;
-  height: calc(80% - 180px);
+  max-height: calc(80% - 216px);
   overflow: auto;
 }
 
@@ -32,9 +37,27 @@ mat-header-cell {
   padding-left: 1rem;
 
   &.done {
-    color: green;
+    color: $color-green;
   }
   &.pending {
-    color: orange;
+    color: $color-orange;
+    margin-left: 2.5rem;
   }
+  &.delete {
+    cursor: pointer;
+    &:hover{
+      color: $color-red-light;
+    }
+  }
+}
+
+.l-button {
+ &.disabled {
+  &.clean-list {
+
+    margin-left: 75%;
+    position: relative;
+    bottom: 1rem;
+  }
+ }
 }
