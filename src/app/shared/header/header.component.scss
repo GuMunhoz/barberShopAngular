@@ -40,3 +40,25 @@ background-color: #030303;
   margin-top: 25px;
 }
 
+.mat-list-base{
+  position: absolute;
+  right: 3.5rem;
+  top: 4.5rem;
+  border-radius: 4px;
+  background-color: $color-grey;
+  box-shadow: 0 0 10px $color-grey-light;
+  width: 140px;
+}
+mat-list-item{
+  display: block;
+  height: 38px;
+  -webkit-tap-highlight-color: transparent;
+  width: 100px;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 500;
+  border-bottom: 1px solid $color-grey-light;
+  &:hover{
+    background-color: $color-white-lighter;
+  }
+}
