@@ -8,9 +8,17 @@
       <a class="header-button" mat-button [routerLink]="['/barbers']" >Barbeiros</a>
       <a class="header-button" mat-button [routerLink]="['/locality']" >Localidade</a>
       <a class="header-button" mat-button [routerLink]="['/login']" >Entrar</a>
-      <button><mat-icon>settings</mat-icon> </button>
-
+      <button (click)="openSetting()">
+        <mat-icon matTooltip="Configurações" *ngIf="!openList">person</mat-icon>
+        <mat-icon *ngIf="openList">close</mat-icon>
+      </button>
   </mat-toolbar>
+  <mat-list *ngIf="openList" role="list">
+    <div class="triangle-up">
+    </div>
+    <mat-list-item role="listitem" [routerLink]="['/admin']" >Meu perfil</mat-list-item>
+    <mat-list-item role="listitem">Sair</mat-list-item>
+  </mat-list>
 
 
 </main>

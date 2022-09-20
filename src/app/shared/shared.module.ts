@@ -6,6 +6,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatTableModule } from '@angular/material/table';
 import{MatTooltipModule} from '@angular/material/tooltip';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import{MatListModule} from '@angular/material/list'
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -42,6 +43,7 @@ import { ConfirmationModalComponent } from './modals/schedules/confirmation-moda
     MatRadioModule,
     MatTooltipModule,
     MatSlideToggleModule,
+    MatListModule
 
   ],
   exports: [

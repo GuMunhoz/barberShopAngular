@@ -40,3 +40,43 @@ background-color: #030303;
   margin-top: 25px;
 }
 
+.mat-list-base{
+  position: absolute;
+  right: 2.5rem;
+  top: 5.5rem;
+  border-radius: 4px;
+  background-color: $color-grey;
+  box-shadow: 0 0 10px $color-grey-light;
+  width: 140px;
+}
+mat-list-item{
+  display: block;
+  height: 38px;
+  -webkit-tap-highlight-color: transparent;
+  width: 100px;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 500;
+  border-bottom: 1px solid $color-grey-light;
+  &:hover{
+    background-color: $color-white-lighter;
+  }
+}
+
+.triangle-up{
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 18px solid$color-grey;
+  width: 0;
+  height: 0;
+  position: relative;
+  bottom: 24px;
+  left: 100px;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1550px) {
+  .mat-list-base {
+    right: 5rem;
+  }
+}
