@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   openList: boolean = false;
-  constructor() { }
+  constructor(private elem: ElementRef) { }
 
   ngOnInit(): void {
   }
@@ -15,4 +15,9 @@ export class HeaderComponent implements OnInit {
 openSetting(){
   this.openList = !this.openList;
 }
+@HostListener('document:click', ['$event'])
+  DocumentClick(event: Event) {
+    if (this.elem.nativeElement.contains(event.target)) this.openList = false;
+  }
+
 }
