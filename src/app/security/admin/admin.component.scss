@@ -1,0 +1,42 @@
+@import '../../../sass/helpers/variables';
+
+.header {
+  margin-left: 0;
+  margin-right: 25rem;
+}
+
+.list {
+  color: $color-grey-dark;
+  padding-left: 22rem;
+
+  > li {
+    line-height: 20px;
+    font-weight: 300;
+    margin-top: 1.5rem;
+    background-color: $color-grey;
+    width: 55vw;
+    height: 12vh;
+    padding: 0.5rem;
+    >.title-container {
+      text-align: center;
+      width: 70%;
+      font-size: 22px;
+      color: $color-black;
+
+    }
+  }
+
+}
+
+.l-button {
+  position: relative;
+  border: 1px solid $color-grey-dark;
+  color: $color-black;
+  margin-left: 80%;
+  bottom: 1.5rem;
+
+  &:hover {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}

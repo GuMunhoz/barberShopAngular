@@ -1,1 +1,15 @@
-<p>admin works!</p>
+<main class="container">
+  <header class="header"><h1>Meu Perfil</h1></header>
+  <ul class="list">
+    <li *ngFor=" let containers of containers; let i = index" >
+      <p>Alterar {{i}}</p>
+     <h3 class="title-container">{{containers.containerTitle}} </h3>
+     <button class="l-button" (click)="getNavigate()"> Alterar</button>
+    </li>
+    <li>
+      <p>Alterar</p>
+      <h3 class="title-container">Limpar minha agenda</h3>
+      <button class="l-button"> Resetar</button>
+    </li>
+  </ul>
+</main>
