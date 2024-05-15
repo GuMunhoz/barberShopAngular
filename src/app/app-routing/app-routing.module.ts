@@ -14,6 +14,7 @@ import { AdminComponent } from '../security/admin/admin.component';
 import { MySchedulesComponent } from '../security/my-schedules/my-schedules.component';
 import { NotFoundComponent } from '../security/not-found/not-found.component';
 import { NewPasswordComponent } from '../security/new-password/new-password.component';
+import { EditProfileComponent } from '../security/edit-profile/edit-profile.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'password', component: ForgetPasswordComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'hours', component: MySchedulesComponent },
+  {path: 'edit-profile', component: EditProfileComponent}
 
 ];
 
